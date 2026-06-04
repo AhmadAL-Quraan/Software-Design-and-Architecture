@@ -74,3 +74,14 @@ class ModrenFamilyFactory implements FurnitureFactory {
     return new ModrenSofa();
   }
 }
+
+class test {
+  public static void main(String[] args) {
+    FurnitureFactory factory = new VictorianFamilyFactory();
+
+    Chair chair = factory.createChair(); // VictorianChair
+    Sofa sofa = factory.createSofa(); // VictorianSofa
+    System.out.println(chair.sitOn());
+    System.out.println(sofa.lieOn());
+  }
+}
